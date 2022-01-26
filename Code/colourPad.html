@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Colour Pad</title>
+
+        <link href="css/generalLayout.css" type="text/css" rel="stylesheet">
+
+        <link href="css/colourPadStyle.css" type="text/css" rel="stylesheet">
+
+        <script src="js/typingEffect.js" defer></script>
+
+        <script src="js/accessOps.js" defer></script>
+
+        <script src="js/groupTimer.js" defer></script>
+        
+        <script src="js/colourPadScipt.js" defer></script>
+
+        <script src="js/textBoxSizing.js" defer></script>
+
+        <script src="js/stopAtFooter.js" defer></script>
+    </head>
+
+    <body>
+        
+        <audio autoplay loop id = "music" muted="muted">
+            <source src="audio/keyboardClicks.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h1 id="GTimer">Timer</h1>
+        
+        <div id="wrapper">
+            <div id="header"></div>
+
+            <button id='colourBlind'>Colour Blind</button>
+
+                <table id="colourPad">
+                    <tr>
+                        <td id="padScreen"colspan="3">Select</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "colourCell"><button class = "colourButton"></button></td>
+                        <td class = "colourCell"><button class = "colourButton"></button></td>
+                        <td class = "colourCell"><button class = "colourButton"></button></td>
+                    </tr>
+    
+                    <tr>
+                        <td class = "colourCell"><button class = "colourButton"></button></td>
+                        <td class = "colourCell"><button class = "colourButton"></button></td>
+                        <td class = "colourCell"><button class = "colourButton"></button></td>
+                    </tr>
+    
+                    <tr>
+                        <td class = "colourCell"><button class = "colourButton"></button></td>
+                        <td class = "colourCell"><button class = "colourButton"></button></td>
+                        <td class = "colourCell"><button class = "colourButton"></button></td>
+                    </tr>
+    
+                    <tr>
+                        <td id="submitCell" colspan="3"><button id="submit">Submit</button></td>
+                    </tr>
+                </table>
+
+                <p id="textBox"></p>
+            
+
+            <div id="footer"></div>
+        </div>
+    </body>
+</html>

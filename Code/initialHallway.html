@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content = " width=device-width,initial-scale=1">
+    
+        <title>Initial Hallway</title>
+        <link href="css/hallway.css" type="text/css" rel = "stylesheet">
+        <script type="text/javascript" src="js/typingEffect.js"></script>
+        <script type="text/javascript" src="js/accessOps.js"></script>
+        <script type="text/javascript" src="js/groupTimer.js"></script>
+        <script src = "js/initialHallway.js" type = "text/javascript"></script>
+    </head>
+    
+    <body onload = "timer();">
+  
+        <audio autoplay loop id = "music" muted="muted">
+            <source src="audio/keyboardClicks.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <h1 id="GTimer">Timer</h1>
+        
+        <div id = "wrapper">
+            <div id = "header">
+            </div>
+
+                <div id = "hallwayContainer"> 
+                     
+                    <div id = "hallway">  
+                        <img src="images/editedHallway.png">
+                        <p id = "textBox"></p>
+                    </div>
+                </div>
+            
+            <div id="footer"></div>
+        </div>
+       
+    </body> 
+
+</html>
+
+
+

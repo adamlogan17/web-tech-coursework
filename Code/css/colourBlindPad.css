@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'CalcFont';
+    src: url("../fonts/DIGITALDREAM.ttf");
+}
+
+* {
+    box-sizing:border-box;
+    padding:0px;
+    margin: 0px;
+    font-family: verdana, sans-serif; 
+}
+
+h1{
+    font-family:2em;
+    font-family: papyrus, fantasy;
+}
+
+body{
+    background-color:lightgray;
+    text-align: center;
+}
+
+#wrapper {
+    width:100%;
+    background-image: url("../images/White_wall.jpg");
+    /*background-color: #A9A9A9;*/
+    /*margin: 50px auto 0px;*/
+    margin: auto;
+    overflow: auto;             
+}
+            
+#header, #footer {
+    background-image: url('../images/covidBackground.webp'); 
+    padding: 40px;
+    color:white; 
+    text-align: center;
+    font-size: 2em;  
+}
+
+#header {
+    border-bottom: 5px solid #2F4F4F;
+}
+
+#footer {
+    border-top: 5px solid #2F4F4F;
+}
+
+#colourBlind {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+
+#colourPad {
+    background-color: #434e61;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 10%;
+    border: 1px solid black;
+    border-spacing: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#colourPad button {
+    outline: none;
+}
+
+.colourCell {
+    background-color: #647187;
+    height: 70px;
+    width: 70px;
+    border: solid 1px black;
+    border-radius: 100%;
+}
+
+.colourButton {
+    margin: 10%;
+    height: 80%;
+    width: 80%; 
+    border-radius: 100%;
+}
+
+#submit {
+    margin: auto;
+    display: block;
+    background-color: #647187;
+    width: 90px;
+    height: 35px;
+    border-radius: 10%;
+}
+
+#padScreen {
+    border-radius: 20px;
+    height: 50px;
+    font-family: 'CalcFont', monospace;
+    border: #192c4e62 5px solid;
+    background-color: #5f942aaf;
+}
+
+#Timer{
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    background-color: black;
+    color: white; 
+    
+}

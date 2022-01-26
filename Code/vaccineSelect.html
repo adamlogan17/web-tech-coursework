@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Vaccine Select</title>
+        <link href="css/layout.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="js/accessOps.js"></script>
+        <script type="text/javascript" src="js/changingLayout.js"></script>
+        <script type="text/javascript" src="js/rgbAndHexFunc.js"></script>
+        <script type="text/javascript" src="js/externalJavaScript.js"></script>
+    </head>
+    
+    <body onload="startVideoTimer();" onresize="col2Height();">
+        
+        <!-- vaccine video -->
+        <div id="videoContainer">
+            <video id="introVideo" autoplay muted>
+                <source src="videos/Vaccine%20clip.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <!-- background video -->
+        <div id="videoBackground">
+            <video id="backgroundVideo" autoplay loop muted>
+                <source src="videos/Covid%20without%20text.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div id="wrapper">
+            <div id="banner">
+                <h1>Cov!d Cr!s!s</h1>
+            </div>
+            <div id="nameBar">
+                <label for="txtName">Enter Name: </label>
+                <input type="text" id="txtName"/>
+            </div>
+            <div class="col1">
+                <!-- vaccine table -->
+                <table>
+                    <tr>
+                        <th colspan="3">Select a Vaccine!</th>
+                    </tr>
+                    <tr>
+                        <td id="1" onmouseover="vaccineHover('1')" onmouseout="noHover()" onclick="vaccineSelected('1','Pfizer-BioNTech')"><img src="images/vaccine1.png" alt="vaccine 1">Pfizer BioNTech</td>
+                        <td id="2" onmouseover="vaccineHover('2')" onmouseout="noHover()" onclick="vaccineSelected('2','Oxford-AstraZeneca')"><img src="images/vaccine2.png" alt="vaccine 2">Oxford AstraZeneca</td>
+                        <td id="3" onmouseover="vaccineHover('3')" onmouseout="noHover()" onclick="vaccineSelected('3','Mordena')"><img src="images/vaccine3.png" alt="vaccine 3">Mordena</td>
+                    </tr>
+                    <tr>
+                        <td id="4" onmouseover="vaccineHover('4')" onmouseout="noHover()" onclick="vaccineSelected('4','Sputnik V')"><img src="images/vaccine4.png" alt="vaccine 4">Sputnik V</td>
+                        <td id="5" onmouseover="vaccineHover('5')" onmouseout="noHover()" onclick="vaccineSelected('5','Corona-Vac')"><img src="images/vaccine5.png" alt="vaccine 5">Corona Vac</td>
+                        <td id="6" onmouseover="vaccineHover('6')" onmouseout="noHover()" onclick="vaccineSelected('6', 'No Vaccine')"><img src="images/noVaccine.png" alt="no vaccine"> No Vaccine</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col2">
+                <p id="vaccineInfo"></p>
+            </div>
+            <div id="footer">
+                <input id="nextPage" type="button" value="Next" onclick="nextPageVaccineSelect();">
+                <input id="previousPage" type="button" value="Previous" onclick="previousPageVaccineSelect();">
+            </div>        
+        </div>
+    </body>
+</html>

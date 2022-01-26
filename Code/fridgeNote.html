@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Fridge Note</title>
+        <link href="css/fridgeNote.css" type="text/css" rel="stylesheet">
+        <link href="css/room2Layout.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="js/typingEffect.js"></script>
+        <script type="text/javascript" src="js/accessOps.js"></script>
+        <script type="text/javascript" src="js/groupTimer.js"></script>
+        <script type="text/javascript" src="js/fridgeNote.js"></script>
+    </head>
+    <body onload="timer(); getAnswer();">
+        
+        <audio autoplay loop id = "music" muted="muted">
+            <source src="audio/keyboardClicks.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <div id = "wrapper">
+            <div id="header">
+            </div>
+            <div id = "mainContainer">
+                <div id = "fridgeNote">
+                    <button id = "noteButton" onclick="buttonClick();"></button>
+                </div>
+            </div>
+            <!--<div id="Timer">-->
+                <h1 id="GTimer">Timer</h1>
+            <!--</div>-->
+            <div id = "textBox"></div>
+            <div id = "noteText">
+                <p><font size="+2">CODE FOR KEY BOX: <span id="code">FF0</span>…<br><br>
+                    Move on to the next room by pressing
+                    <span onclick="buttonClick()"><font color="darkblue"><u>here</u></font></span>!
+                </font></p>
+            </div>
+            <div id="footer"></div>
+        </div>
+        <script src="js/fridgeNote.js"></script>
+    </body>
+</html>

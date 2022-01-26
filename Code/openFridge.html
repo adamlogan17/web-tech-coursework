@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Open Fridge</title>
+        <link href="css/openFridge.css" type="text/css" rel="stylesheet">
+        <link href="css/room2Layout.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="js/typingEffect.js"></script>
+        <script type="text/javascript" src="js/accessOps.js"></script>
+        <script type="text/javascript" src="js/groupTimer.js"></script>
+        <script type="text/javascript" src="js/kitchenScript.js"></script>
+    </head>
+    <body onload="load(': Yay! Time for some cake! Wait what\'s that?')">
+        
+        <audio autoplay loop id = "music" muted="muted">
+            <source src="audio/keyboardClicks.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <div id = "wrapper">
+            <div id="header">
+            </div>
+            <div id = "mainContainer">
+                <div id = "openFridge">
+                    <button id = "fridgeButton" onclick="buttonClick();"></button>
+                </div>
+            </div>
+            <img id="chocolateCake" src="images/fridgeGame/chocolateCake.png" alt="Cake"/>
+            <img id="noteInCake" src="images/fridgeGame/note.jpg" alt="Note"/>
+            <!--<div id="Timer">-->
+                <h1 id="GTimer">Timer</h1>
+            <!--</div>-->
+            <div>
+                <p id = "textBox"></p>
+            </div>
+            <div id="footer"></div>
+        </div>
+        <script src="js/openFridge.js"></script>
+    </body>
+</html>

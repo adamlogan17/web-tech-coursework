@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Accessibility Options</title>
+        <link href="css/layout.css" type="text/css" rel="stylesheet">
+        <script type ="text/javascript" src="js/accessOps.js"></script>
+        <script type="text/javascript" src="js/changingLayout.js"></script>
+        <script type="text/javascript" src="js/externalJavaScript.js"></script>
+        <style type="text/css">
+
+            #videoBackground{
+                visibility: visible;
+            }
+            #wrapper{
+                visibility: visible;
+            }
+        </style>
+    </head>
+    
+    <body onload="checkIfSrollbarIsNeeded();" onresize="checkIfSrollbarIsNeeded();">
+        <!-- background video -->
+        <div id="videoBackground">
+            <video id="backgroundVideo"autoplay loop muted>
+                <source src="videos/Covid%20without%20text.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div id="wrapper">
+            <div id="banner">
+                <h1>Accessibility Options</h1>
+            </div>
+            
+            <div id="text">
+                <form>
+                    <label for="txt">Choose font size</label>
+                    <select name="txt" id="txt">
+                        <option value="small">Small</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                    <br>
+                    <label for="contrast">Choose Contrast</label>
+                    <select name="contrast" id="contrast">
+                        <option value="normal"selected>Normal</option>
+                        <option value="high">High</option>
+                    </select>
+                    <br>
+                    <input id="Apply" type="button" value="Apply" onclick="getChoice();">
+                </form>
+            </div>
+            
+            <div id="footer">
+                <input id="previousPage" type="button" value="Previous" onclick="previousPageVaccineSelect();">
+            </div> 
+        </div>
+    </body>
+</html>

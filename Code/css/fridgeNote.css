@@ -1,0 +1,53 @@
+
+
+#fridgeNote {
+    margin: auto;
+    background-size: cover; /* keeps the aspect ratio of the background image */
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/fridgeGame/note.jpg');
+    position: relative;
+
+}
+
+
+#noteText{
+
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    padding: 10px;
+    background: transparent;
+    text-align: center;
+    width: 30%;
+    height: 30%;
+}
+
+
+#mainContainer {
+    margin: auto;
+    width: 35%;
+    height: 70vh;
+}
+
+#noteButton {
+    z-index: 1;
+    background: transparent;
+    border: transparent;
+    outline: none;
+    position: relative;
+    height: 8%;
+    width: 15%;
+    top: 75%;
+    left: 18%;
+}
+
+#GTimer{
+        position: fixed;
+        top: 0%;
+        right: 0%;
+        padding: 10px;
+        background-color: darkblue;
+        color: white; 
+        font-family: papyrus, fantasy;
+    }

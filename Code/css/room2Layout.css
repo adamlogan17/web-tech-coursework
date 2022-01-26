@@ -1,0 +1,87 @@
+html {
+    --cursorX: 50px; /* This is the initialization of the
+                        css custom properties. */
+    --cursorY: 50px;
+}
+
+* {
+    box-sizing:border-box;
+    padding:0px;
+    margin: 0px;
+    font-family: verdana, sans-serif;
+}
+
+body{
+    background-color:lightgray;
+    text-align: center;
+}
+
+#wrapper {
+    width:100%;
+    background-color: #A9A9A9;
+    margin: auto;
+    overflow: auto;
+    position: relative;
+}
+
+/* Elizabeth's code */
+#textBox{
+    position: fixed;
+    top: 15%;
+    left: 2%;
+    border: 1px white solid;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    width: 350px;
+}
+
+#header, #footer {
+    background-image: url('../images/covidBackground.webp');
+    padding: 40px;
+    color:white;
+    text-align: center;
+    font-size: 2em;
+}
+
+/*
+#header {
+    border-bottom: 5px solid #2F4F4F;
+}
+
+#footer {
+    border-top: 5px solid #2F4F4F;
+}
+*/
+
+#Timer{
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    padding: 10px;
+    background-color: darkblue;
+    color: white;
+}
+
+
+h1{
+    font-family: papyrus, fantasy;
+}
+
+h2{
+    font-size: 2em;
+}
+
+p{
+    font-size: 1em;
+}
+
+#GTimer{
+        position: fixed;
+        top: 0%;
+        right: 0%;
+        padding: 10px;
+        background-color: darkblue;
+        color: white; 
+        font-family: papyrus, fantasy;
+    }

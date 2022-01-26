@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Statistics</title>
+        <link href="css/layoutLeaderBoard.css" type="text/css" rel = "stylesheet">
+        <script type="text/javascript" src="js/accessOps.js"></script>
+        <script type="text/javascript" src="js/changingLayout.js"></script>
+        <script type="text/javascript" src="js/stats.js"></script>
+    </head>
+    
+    <body onload="getInfo();" onresize="checkIfSrollbarIsNeeded();">
+        
+        <!-- background video -->
+        <div id="videoBackground">
+            <video id="backgroundVideo" autoplay loop muted>
+                <source src="videos/Covid%20without%20text.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div id="wrapper">
+            <div id="banner"></div>
+            
+            <div id="text">
+                <div class = "stats">
+                     <header>
+                        <h1>Statistics</h1>
+                        <nav>
+                            <a href = "" class ="active">Breakdown</a>
+                            <a href = "finalScreenLeaderboard.html">LeaderBoard</a>
+                        </nav>
+                     </header>
+
+                     <table>
+                        <thead>
+                            <tr>
+                                <th class = "room">Room</th>
+                                <th class="tt">Time Taken (s)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class = "room">Living Room</td>
+                                <td id="livingRoomTime" class="tt"></td>
+                            </tr>
+
+                            <tr>
+                                <td class = "room">Kitchen</td>
+                                <td id="kitchenTime" class="tt"></td>
+                            </tr>
+
+                            <tr>
+                                <td class = "room">Basement</td>
+                                <td id="basementTime" class="tt"></td>
+                            </tr>
+
+                            <tr>
+
+                             <td class = "room">Colour Pad</td>
+                             <td id="colourPadTime" class="tt">hello</td>
+                            </tr>
+                        </tbody>
+                     </table>
+                     <button id="myBtn" onclick="location.href ='startScreen.html';">Play Again</button>
+                </div>
+            </div>
+
+            <div id="footer"></div> 
+        </div>
+    </body>
+</html>

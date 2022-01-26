@@ -1,0 +1,36 @@
+
+
+#kitchen {
+    margin: auto;
+    background-size: cover; /* keeps the aspect ratio of the background image */
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/rooms/kitchen.jpg');
+}
+
+#mainContainer {
+    margin: auto;
+    width: 50%;
+    height: 70vh;
+}
+
+#fridgeButton {
+    background: transparent;
+    border: transparent;
+    outline: none;
+    position: relative;
+    height: 40%;
+    width: 13%;
+    top: 25%;
+    right: 30%;
+}
+
+#GTimer{
+        position: fixed;
+        top: 0%;
+        right: 0%;
+        padding: 10px;
+        background-color: darkblue;
+        color: white;
+        font-family: papyrus, fantasy;
+    }

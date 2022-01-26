@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Statistics</title>
+        <link href="css/layoutLeaderBoard.css" type="text/css" rel = "stylesheet">
+        <script type="text/javascript" src="js/accessOps.js"></script>
+        <script type="text/javascript" src="js/changingLayout.js"></script>
+        <script type="text/javascript" src="js/stats.js"></script>
+    </head>
+    
+    <body onload="getLeaderBoard();" onresize="heightCheck();">
+        
+        <!-- background video -->
+        <div id="videoBackground">
+            <video id="backgroundVideo" autoplay loop muted>
+                <source src="videos/Covid%20without%20text.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div id="wrapper">
+            <div id="banner"></div>
+            
+            <div id="text">
+                <div class = "stats">
+                     <header>
+                        <h1>Statistics</h1>
+                        <nav>
+                            <a href = "finalScreen.html">Breakdown</a>
+                            <a href = "" class ="active">LeaderBoard</a>
+                        </nav>
+                     </header>
+
+                     <table>
+                        <thead>
+                            <tr>
+                                <th class = "room">Name</th>
+                                <th class="tt">Time</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        </tbody>
+                     </table>
+                     <button id="myBtn" onclick="location.href ='startScreen.html';">Play Again</button>
+                </div>
+            </div>
+
+            <div id="footer"></div> 
+        </div>
+    </body>
+</html>

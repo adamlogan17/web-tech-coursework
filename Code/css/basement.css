@@ -1,0 +1,73 @@
+#wrapper, body {
+  overflow: auto;
+}
+
+html {
+    --cursorX: 50vh; /* This is the initialization of the 
+                        css custom properties. */
+    --cursorY: 50vh;
+    overflow: hidden;
+}
+
+.lightsOn {
+  background-image: url('../images/basement3.png');
+}
+
+.torchEffect {
+  cursor: none;
+
+  background-image: radial-gradient(
+    circle at var(--cursorX) var(--cursorY), /* this specifies that the 
+                                                shape of the gradient is 
+                                                a circle and the center of
+                                                the circle should be placed 
+                                                at the position of circle*/
+    /* The brightness of the torch can be changed by changing the opacity of the following values.
+       more 'light' layers can be added to provide a better 'blur' effect around the cursor */
+    rgba(0,0,0,0) 1vh, 
+    rgba(0,0,0,.5) 3vh, 
+    rgba(0,0,0,1) 8vh /* This is the outer layer of the torch and is the dimmest layer */
+  ) , url('../images/basement3.png');
+}
+
+#basement {
+    overflow: hidden;
+    margin: auto;
+    background-size:contain; /* keeps the aspect ratio of the background image */
+
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    
+    width: 40%;
+    height: 67%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#fuseButton {
+    /* these percentages are in relation to the div tag */
+    position: relative;
+    top: 1%;
+    left: 41%;
+
+    height: 21%;
+    width: 10%;
+}
+
+#coatButton {
+  position: relative; 
+  top: 25%;
+  right: 22%;
+
+  height: 55%;
+  width: 8%;
+}
+
+
+.buttonInBasement {
+  background: transparent;
+  border: transparent;
+  outline: none;
+  cursor: none;
+}

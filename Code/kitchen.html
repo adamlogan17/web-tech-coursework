@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Kitchen</title>
+        <link href="css/kitchen.css" type="text/css" rel="stylesheet">
+        <link href="css/room2Layout.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="js/typingEffect.js"></script>
+        <script type="text/javascript" src="js/accessOps.js"></script>
+        <script type="text/javascript" src="js/groupTimer.js"></script>
+        <script type="text/javascript" src="js/kitchenScript.js"></script>
+    </head>
+    <body onload="load(': heads into the kitchen and over to the fridge.');">
+        
+        <audio autoplay loop id = "music" muted="muted">
+            <source src="audio/keyboardClicks.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <div id = "wrapper">
+            <div id="header">
+            </div>
+            <div id = "mainContainer">
+                <div id = "kitchen">
+                    <button id = "fridgeButton" onclick="buttonClick();"></button>
+                </div>
+            </div>
+            <!--<div id="Timer">-->
+                <h1 id="GTimer">Timer</h1>
+            <!--</div>-->
+            <div>
+                <p id = "textBox"></p>
+            </div>
+            <div id="footer"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Fuse Box</title>
+
+        <link href="css/fuseBoxStyle.css" type="text/css" rel="stylesheet">
+        
+        <link href="css/generalLayout.css" type="text/css" rel="stylesheet">
+
+        <script type="text/javascript" src="js/typingEffect.js" defer></script>
+        
+        <script src="js/groupTimer.js" defer></script>
+        
+        <script src="js/torchEffect.js" defer></script>
+
+        <script src="js/rgbAndHexFunc.js" defer></script>
+
+        <script src="js/fuseBoxScript.js" defer></script>
+
+        <script src="js/textBoxSizing.js" defer></script>
+
+        <script src="js/stopAtFooter.js" defer></script>
+    </head>
+
+    <body>
+        <audio autoplay loop id = "music" muted="muted">
+            <source src="audio/keyboardClicks.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <h1 id="GTimer">Timer</h1>
+        
+        <div id='wrapper'>
+            <div id="header"></div>
+
+        <!-- The reason for for the code below is that the torch effect can 
+            only work on 1 element and NOT including the children therefore 
+            an invisible box needs to be placed before the true fuse box using 
+            z-index. As this causes another bug to occur which is that the mouse 
+            then never enters in the original endpoints as they are at the back 
+            of the page. Therefore a whole invisible fusebox needs to be made and 
+            placed at the same positioning as the original one to allow the event 
+            listener to work. This invisible fuse box has a higher z-index than 
+            the original. -->
+            <div id="torchBox">
+                <div id = "torchOuterFuseBox">
+                    <div id="torchGameContainer">
+                        <div class="topRow" id="torchTopRow">
+                            <div class="torchEndPoint"></div>
+                            <div class="torchEndPoint"></div>
+                            <div class="torchEndPoint"></div>
+                            <div class="torchEndPoint"></div>
+                        </div>
+
+                        <div class="bottomRow" id="torchBottomRow">
+                            <div class="torchEndPoint"></div>
+                            <div class="torchEndPoint"></div>
+                            <div class="torchEndPoint"></div>
+                            <div class="torchEndPoint"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id = "c1" class="drawingArea"></canvas>
+            <canvas id = "c2" class="drawingArea"></canvas>
+            <canvas id = "c3" class="drawingArea"></canvas>
+            <canvas id = "c4" class="drawingArea"></canvas>
+
+            <div id = "fuseBox">
+                <div id = "outerFuseBox">
+                    <div id="gameContainer">
+                        <div class="topRow">
+                            <div class="endPoint"></div>
+                            <div class="endPoint"></div>
+                            <div class="endPoint"></div>
+                            <div class="endPoint"></div>
+                        </div>
+
+                        <div class="bottomRow">
+                            <div class="endPoint"></div>
+                            <div class="endPoint"></div>
+                            <div class="endPoint"></div>
+                            <div class="endPoint"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p id="textBox"></p> 
+
+            <div id = "footer"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+*{
+    box-sizing:border-box;
+    padding:0px;
+    margin: 0px;
+    font-family: verdana, sans-serif; 
+}
+
+p:hover{
+    color:cornflowerblue;
+}
+            
+body{
+    background-color:lightgray;
+    text-align: center;
+    padding: 30px;
+}
+            
+#wrapper {
+    width:100%;
+    background-color: #A9A9A9;
+    margin: 50px auto 0px;;
+    overflow: auto;
+    border-bottom: 5px solid #2F4F4F;              
+}
+            
+#head {
+    background-image: url('../Images/covidBackground.webp'); /*Changed images folder name*/
+    border-bottom: 5px solid #2F4F4F;
+    padding: 40px;
+    color:white; 
+    text-align: center;
+    font-size: 2em;  
+}
+            
+#credits{           
+    background-color:#000000;
+    color:white;
+    padding: 100px;              
+}
+            
+#creditsTitle{
+    color:white;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+}
+
+h1{
+    font-family: papyrus, fantasy;
+}
+
+h2{
+    font-size: 2em;
+}

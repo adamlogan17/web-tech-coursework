@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Coat Note</title>
+        
+         <link href="css/roomLayout.css" rel="stylesheet" type="text/css" />
+        
+                <style type="text/css">
+            
+            
+            #textBox{
+                position: fixed;
+                /*top: 22%;
+                left: 2%;*/
+                top: 20%;
+                left: 40%;
+                border: 1px white solid;
+                padding: 10px;
+                background-color: black;
+                color: white;
+                width: 450px;
+                text-transform: uppercase;
+            }
+                    
+            #note{
+                position: fixed;
+                top: 50%;
+                left: 40%;
+                border: 1px white solid;
+                padding: 10px;
+                background: transparent;
+                border: transparent;
+                outline: none;
+                text-transform: uppercase;
+                
+                }
+                    
+            #GTimer{
+                position: fixed;
+                top: 0%;
+                right: 0%;
+                padding: 10px;
+                background-color: darkblue;
+                color: white; 
+            }
+        
+        </style>
+        <script type="text/javascript" src="js/typingEffect.js"></script>
+        <script type="text/javascript" src="js/groupTimer.js"></script>
+        <script type="text/javascript">      
+            
+            var myEvent;
+            
+            //timer() calls the timer for the whole escape rooms and displays text 
+            function timer()
+             {
+                 gTimer();
+                 startingText = sessionStorage.getItem('name')+' puts on the coat and looks inside the pocket';
+                 consoleText(startingText, document.getElementById('textBox'));
+                 myEvent = setTimeout(nextPage, 5000);
+             }
+            
+            //nextPage() records the time and moves to the next webpage
+            function nextPage()
+             {
+                 sessionStorage.setItem('gameCount',gameSecondCount);
+                 window.open('hallway.html','_self');
+             }
+
+             //getAnswer() gets the code to display to the user
+            function getAnswer() {
+                 var code = sessionStorage.getItem('answer');
+                 document.getElementById('code').innerHTML = code.slice(code.length - 3);
+             }
+
+        </script>
+        
+    </head>
+    
+    <body onload="timer();getAnswer();" >
+        
+        <audio autoplay loop id = "music" muted="muted">
+            <source src="audio/keyboardClicks.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <h1 id="GTimer">Timer</h1>
+         <div id="head"></div>
+        <img src="images/note.jpg" alt="Note"/>
+        <p id="textBox"></p>
+        <h1 id="note">Code for Key Box: ...<span id="code">000</span></h1>
+         <div id="head"></div>
+    </body>
+    
+</html>

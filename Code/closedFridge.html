@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Closed Fridge</title>
+        <link href="css/closedFridge.css" type="text/css" rel="stylesheet">
+        <link href="css/room2Layout.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="js/typingEffect.js"></script>
+        <script type="text/javascript" src="js/accessOps.js"></script>
+         <script type="text/javascript" src="js/groupTimer.js"></script>
+        <script type="text/javascript" src="js/kitchenScript.js"></script>
+    </head>
+    <body onload="load(': Hmmm&#46;&#46;&#46; thats weird&#46;&#46;&#46; what\'s that puzzle on the fridge?')">
+        
+        <audio autoplay loop id = "music" muted="muted">
+            <source src="audio/keyboardClicks.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <div id = "wrapper">
+            <div id="header">
+            </div>
+            <div id = "mainContainer">
+                <div id = "closedFridge">
+                    <div class = "mazeContainer">
+                        <div id = "firstInnerWall" class = "firstInnerWall"></div>
+                        <div id = "secondInnerWall" class = "secondInnerWall"></div>
+                        <div id = "thirdInnerWall" class = "thirdInnerWall"></div>
+                        <div id = "fourthInnerWall" class = "fourthInnerWall"></div>
+                        <div id = "fifthInnerWall" class = "fifthInnerWall"></div>
+                        <div id = "sixthInnerWall" class = "sixthInnerWall"></div>
+                        <div id = "endHole" class = "endHole"></div>
+                    </div>
+                    <div id = "circle" class = "circle"></div>
+                </div>
+            </div>
+            <!--<div id="Timer">-->
+                <h1 id="GTimer">Timer</h1>
+            <!--</div>-->
+            <div>
+                <p id="textBox"></p>
+            </div>
+
+            <div id="footer"></div>
+        </div>
+        <script src="js/mazeGame.js"></script>
+    </body>
+</html>

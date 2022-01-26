@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Find Items</title>
+        
+        <link href="css/roomLayout.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            
+            img{
+                /*width: 50%;*/
+                display: none;
+                overflow: auto;
+            }
+            
+            #LockdownOver{
+                display: inline;
+            }
+            
+            
+            #textBox{
+                position: fixed;
+                top: 15%;
+                left: 2%;
+                border: 1px white solid;
+                padding: 10px;
+                background-color: white;
+                text-align: center;
+                width: 400px;
+            }
+            
+            #instruction{
+                position: fixed;
+                display: none;
+                width: 22%;
+                top: 30%;
+                right: 2%;
+                border: 1px, white, solid;
+                background-color: red;
+                color: white;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                width: 250px;
+                z-index: 2;
+            }
+            
+             #GameTimerText{
+                /*position: absolute;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                top: 10%;
+                left: 47%;
+                background-color: red;
+                color: white;
+                display: none;*/
+            }
+            
+            button{    
+               /* position: absolute;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                color: transparent;
+                font-size: 16px;
+                cursor: grab;
+                border-radius: 5px;
+                padding: 5px 5px 5px 5px;
+                background: transparent;
+                border: transparent;
+                outline: none;*/
+            }
+            
+            area{
+                cursor: grab;
+            }
+            
+            .tick{
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                z-index: 1;
+                width: 8%;
+                display: none;
+            }
+            
+            #GreenTickM{
+               /* top: 65%;
+                left: 29%; */
+                position: absolute;
+                top: 358px;
+                left: 145px;
+            }
+            
+            #GreenTickVP{
+                /*top: 68%;
+                right: 25%; */
+                position: absolute; 
+                left: 657px;
+                top: 362px;             
+            }
+            
+            #GreenTickHS{
+                /*top: 52%;
+                right: 21%;*/
+                position: absolute;
+                left: 728px;
+                top: 274px;
+            }
+            
+            #GreenTickV{
+               /*top: 92%;
+                left: 34%; */
+                position: absolute;
+                left: 211px;
+                top: 511px;
+            }
+            
+            #GreenTickh{
+               /*top: 92%;
+                left: 34%; */
+                position: absolute;
+                left: 222px;
+                top: 258px;
+            }
+            
+            #GreenTickb{
+               /*top: 92%;
+                left: 34%; */
+                position: absolute;
+                left: 472px;
+                top: 490px;
+            }
+            
+            #GreenTickt{
+               /*top: 92%;
+                left: 34%; */
+                position: absolute;
+                left: 425px;
+                top: 330px;
+            }
+            
+            #GreenTickw{
+                 position: absolute;
+                left: 280px;
+                top: 220px;
+            }
+            
+            #GreenTickf{
+                position: absolute;
+                left: 560px;
+                top: 274px;
+            }
+            
+            #largeText{
+                position: fixed;
+                top: 5%;
+                left: 5%; 
+                color: white;
+                background-color: lightBlue;
+                border: 1px black solid;
+            }
+            
+            audio{
+                display: none;
+            }
+            
+            /*#LivingRoom{
+                z-index: 0;
+            }*/
+            
+            #objectPositioning{
+                position: relative;
+                overflow: auto;
+                width: 45%;
+                margin: 10px auto 10px auto;
+            }
+            
+            #GTimer{
+                position: fixed;
+                top: 0%;
+                right: 0%;
+                padding: 10px;
+                background-color: darkblue;
+                color: white; 
+            }
+        
+        </style>
+        <script type="text/javascript" src="js/typingEffect.js"></script>
+        <script type="text/javascript" src="js/accessOps.js"></script>
+        <script type="text/javascript" src="js/groupTimer.js"></script>
+        <script type="text/javascript" src="js/findItemsjs.js"></script>
+    </head>
+    
+    <body onload="timer();" id="sizing">
+        
+        <audio autoplay loop id = "music" muted="muted">
+            <source src="audio/keyboardClicks.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <h1 id="GTimer">05:00</h1>
+        <!--<h1 id="Timer">Timer</h1>-->
+        <h1 id="GameTimerText"></h1>
+        <!--<button id="largeText" onclick="largerText();">Larger Text</button>
+        <button id="normalText">Normal Text</button>-->
+            <div id="head"> 
+            </div>
+        <p id="instruction">Look for and <b>click</b> on the following items: <br /> A Mask <br /> Your Vaccine Passport <br /> Hand Sanitisier <br /> Visor <br /><a id="option"></a></p>
+            <img src="images/LockdownOver.png" alt="Tv Screen displaying lockdown is over" id='LockdownOver'/>
+            <img src="images/Measures.png" alt="Tv Screen displaying: ‘Precautionary Measures In Place Till 2022: Always Carry: A Mask, Your Vaccine Passport, Hand Santisier, Visor’ " id='Measures'/>
+        
+            <div id="objectPositioning">
+            <img src="images/livingRoomDesign.png" alt="Living Room" id='LivingRoom' usemap="#image-map"/>
+        
+            <map name="image-map">
+                <area coords="718,265,761,307" shape="rect" id="handS" onclick="handsClick();" alt="Hand Sanitiser">
+                <area coords="643,357,698,350,649,392" shape="poly" id="vaccinep" onclick="vaccinepClick();" alt="Vaccine passport">
+                <area coords="145,358,169,358,174,375,121,385" shape="poly" id="mask" onclick="maskClick();" alt="Mask">
+                <area coords="211,511,34" shape="circle" id="visor" onclick="visorClick();" alt="visor">
+                
+                <area coords="180,235,230,280" shape="rect" id="hat" onclick="hatClick();" alt="Hat">
+                <area coords="415,470,505,535" shape="rect" id="book" onclick="bookClick();" alt="book">
+                <area coords="400,310,430,340" shape="rect" id="tea" onclick="teaClick();" alt="tea">
+                <area coords="510,210,628,213,618,359,501,318" shape="poly" id="fire" onclick="fireClick()" alt="fire">
+                <area coords="162,133,349,149,352,223,170,230" shape="poly" id="window" onclick="windowClick()" alt="window">
+            </map>
+                
+            <img src="images/greenTick.webp" alt="GreenTick" id="GreenTickM" class="tick"/>
+            <img src="images/greenTick.webp" alt="GreenTick" id="GreenTickVP" class="tick"/>
+            <img src="images/greenTick.webp" alt="GreenTick" id="GreenTickHS" class="tick"/>
+            <img src="images/greenTick.webp" alt="GreenTick" id="GreenTickV" class="tick"/>
+            <img src="images/greenTick.webp" alt="GreenTick" id="GreenTickh" class="tick"/>
+            <img src="images/greenTick.webp" alt="GreenTick" id="GreenTickb" class="tick"/>
+            <img src="images/greenTick.webp" alt="GreenTick" id="GreenTickt" class="tick"/>
+             <img src="images/greenTick.webp" alt="GreenTick" id="GreenTickf" class="tick"/>
+            <img src="images/greenTick.webp" alt="GreenTick" id="GreenTickw" class="tick"/>
+            </div>
+        
+        
+            <!--<button id="mask" onclick="maskClick();" alt="Transparent mask button">mask</button>
+            <button id="vaccinep" onclick="vaccinepClick();" alt="Transparent vaccine passport button">vaccinep</button>
+            <button id="handS" onclick="handsClick();" alt="Transparent hand sanitiser button">hand sans</button>
+            <button id="visor" onclick="visorClick();" alt="Transparent visor button">visor</button>-->
+            <audio controls
+                src="audio/button.m4a" 
+                id="audio">
+                Your browser does not support the audio element.
+            </audio>
+            <p id="textBox"></p>
+        <div id="head"></div>
+    
+    </body>
+    
+</html>

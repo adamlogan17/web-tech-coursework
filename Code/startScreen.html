@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Start Screen</title>
+        <link href="css/layoutStartScreen.css" type="text/css" rel="stylesheet">
+        <script type ="text/javascript" src="js/accessOps.js"></script>
+        <script type="text/javascript" src="js/changingLayout.js"></script>
+        <script type="text/javascript" src="js/javaScriptStartScreen.js"></script>
+        <style type="text/css">
+            p{
+                font-size: 0.35em;
+            }
+        </style>
+    </head>
+    
+    <body onload="startVideoTimer()" onresize="fixingTitleLayout();">
+        
+        <!-- intro video -->
+        <div id="videoContainer">
+            <video id="introVideo" autoplay muted>
+                <source src="videos/Introduction%20Covid%20Crisis.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <!-- background video -->
+        <div id="videoBackground">
+            <video id="backgroundVideo" autoplay loop muted>
+                <source src="videos/Covid%20without%20text.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        
+        <div id="wrapper">
+            
+            <div id="banner">
+                <h1 id="title">Cov!d Cr!s!s</h1>
+            </div>
+                <!-- pointer needle for start -->
+            <div id="text">
+                
+                <img id="needle1" src="images/needlePointingRight.png" alt="needle">
+
+                <a href="vaccineSelect.html" onmouseover="hoverEffect('needle1', 'needle2')" onmouseout="noHover('needle1', 'needle2')">Start</a>
+
+                <!-- pointer needle for start -->
+                <img id="needle2" src="images/needlePointingLeft.png" alt="needle">
+
+                <br />
+
+                <!-- pointer needle for credits -->
+                <img id="needle3" src="images/needlePointingRight.png" alt="needle">
+
+                <a href="creditsPage.html" onmouseover="hoverEffect('needle3', 'needle4')" onmouseout="noHover('needle3', 'needle4')">Credits</a>
+
+                <!-- pointer needle for credits -->
+                <img id="needle4" src="images/needlePointingLeft.png" alt="needle">
+
+                <br />
+
+                <!-- pointer needle for leaderboard -->
+                <img id="needle5" src="images/needlePointingRight.png" alt="needle">
+
+                <a href="globalLeaderboard.html" onmouseover="hoverEffect('needle5', 'needle6')" onmouseout="noHover('needle5', 'needle6')">Leaderboard</a>
+
+                <!-- pointer needle for leaderboard -->
+                <img id="needle6" src="images/needlePointingLeft.png" alt="needle">
+
+                <br />
+
+                <!-- pointer needle for options -->
+                <img id="needle7" src="images/needlePointingRight.png" alt="needle">
+
+                <a href="accessibilityOptions.html" onmouseover="hoverEffect('needle7', 'needle8')" onmouseout="noHover('needle7', 'needle8')">Accessibility Options</a>
+
+                <!-- pointer needle for options -->
+                <img id="needle8" src="images/needlePointingLeft.png" alt="needle">
+                
+                <p>Note: if you want audio on any of the pages you must interact with the webpage first if you are using chrome</p>
+                
+            </div>
+            <div id="footer"></div> 
+        </div>
+
+    </body>
+</html>
