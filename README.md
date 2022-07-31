@@ -5,6 +5,6 @@ Due to the coursework being a group project, I did not complete all the work mys
 
 I have uploaded a pdf version and a docx version of the weekly logs and individual report file as the gif's within this do not play on the pdf version. 
 
-To begin the game, download the 'code' folder and launch thw 'startScreen.html' or alternatively you can play the game using the following link below, although this is not recommended.
+To begin the game, download the 'code' folder and launch the 'startScreen.html' or alternatively you can play the game using the following link below, although this is not recommended.
 
 https://web-tech-coursework.netlify.app/
