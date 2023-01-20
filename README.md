@@ -1,8 +1,8 @@
-- [Web-Tech-Coursework](#web-tech-coursework)
+- [web-tech-coursework](#web-tech-coursework)
     - [How do I get started?](#how-do-i-get-started)
     - [Individual Contribution](#individual-contribution)
 
-# Web-Tech-Coursework
+# web-tech-coursework
 This is my coursework submission for my Year 1 Web Technology module. 
 
 Due to the coursework being a group project, I did not complete all the work myself. I have decided to omit the names of the other 4 members of this project and I have replaced where their names where mentioned with 'XXXXX'. All members of the group contributed to the powerpoint presentation, not just myself.
